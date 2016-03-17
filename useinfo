@@ -1,0 +1,41 @@
+
+JeeWeiXin 使用教程
+2015-04-24 13:53 |	浏览：9120
+
+1、下载JEEWeiXin源代码
+到“首页”进行下载
+
+2、安装开发环境和数据库
+安装JDK、Tomcat、Eclipse、MySql开发环境
+如果没有相关软件，可以到 http://weixinpy.com/vp/source/download/ 下载
+
+3、安装install.sql数据库结构
+系统使用的是MySql数据库，所以新建一个数据库（比如jeeweixindb，编码utf-8），执行 jeeweixin/doc/install.sql 文件，创建表结构、初始化数据。
+
+4、修改项目的配置文件 jdbc.properties
+主要是配置数据库链接信息，这样项目启动的时候就可以连上数据库了。
+
+5、本地启动
+假设你现在是在本地的eclipse中导入jeeweixin，通过以上配置之后，就可以部署到tomcat中，启动项目了。项目启动成功后，效果参考 www.jeeweixin.com 。
+
+6、发布项目到服务器
+如果本地没有问题，就可以发布到公网服务器，要求如下：
+1）服务器必须是公网服务器，也就是说，微信平台可以访问到你的服务器，这样才能进行Url和Token认证，才能互发消息；
+2）项目部属的web应用的端口必须是 80 端口，这个是微信平台要求的；
+3）如果公网上的数据库用户名、密码不一致，也要对应修改
+
+7、如果系统部属没有问题，并且已经启动
+效果参考www.jeeweixin.com
+
+8、系统简单介绍：
+1）系统首页
+
+
+2）url 、token获取
+
+
+3）以OAuth接口为例，简单讲解如何学习
+
+
+了解更多，请参考demo：www.jeeweixin.com 、关注官方微信公众号 weixinpy-com
+
